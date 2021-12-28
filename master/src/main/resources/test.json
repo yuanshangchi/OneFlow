@@ -3,11 +3,7 @@
   "projectName": "projectA",
   "dataSource": [
     {
-      "url": "sss",
-      "userName": "ssss",
-      "password": "ssss",
-      "driver": "sss",
-      "name": "ssss"
+      "name": "hive"
     }
   ],
   "tasks": [

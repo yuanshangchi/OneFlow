@@ -9,7 +9,7 @@ public class StepVO {
     private String type;
 
     //hive
-    private Map<String, String> hiveParam;
+    private Map<String, Object> hiveParam;
     private String path;
 
     //spark
@@ -49,7 +49,7 @@ public class StepVO {
         return type;
     }
 
-    public Map<String, String> getHiveParam() {
+    public Map<String, Object> getHiveParam() {
         return hiveParam;
     }
 
