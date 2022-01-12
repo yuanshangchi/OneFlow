@@ -30,20 +30,19 @@ public class SchedulerConfiguration {
             this.beanFactory.initializeBean(jobInstance, "jobInstance");
             return jobInstance;
         }
+    }
 
+    @Bean
+    public SchedulerFactoryBean schedulerFactory(ApplicationContext applicationContext) {
+        SchedulerFactoryBean schedulerFactoryBean = new SchedulerFactoryBean();
+        schedulerFactoryBean.setJobFactory(new AutowireCapableBeanJobFactory(applicationContext.getAutowireCapableBeanFactory()));
+        return schedulerFactoryBean;
+    }
 
-        @Bean
-        public SchedulerFactoryBean schedulerFactory(ApplicationContext applicationContext) {
-            SchedulerFactoryBean schedulerFactoryBean = new SchedulerFactoryBean();
-            schedulerFactoryBean.setJobFactory(new AutowireCapableBeanJobFactory(applicationContext.getAutowireCapableBeanFactory()));
-            return schedulerFactoryBean;
-        }
-
-        @Bean
-        public Scheduler scheduler(ApplicationContext applicationContext) throws SchedulerException {
-            Scheduler scheduler = schedulerFactory(applicationContext).getScheduler();
-            scheduler.start();
-            return scheduler;
-        }
+    @Bean
+    public Scheduler scheduler(ApplicationContext applicationContext) throws SchedulerException {
+        Scheduler scheduler = schedulerFactory(applicationContext).getScheduler();
+        scheduler.start();
+        return scheduler;
     }
 }
