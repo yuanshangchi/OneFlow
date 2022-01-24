@@ -1,3 +1,4 @@
-D:\Senior\OneFlow\model\src\main\java\com\oc\oneflow\model\ConfigVO.java
-D:\Senior\OneFlow\model\src\main\java\com\oc\oneflow\model\StepVO.java
-D:\Senior\OneFlow\model\src\main\java\com\oc\oneflow\model\TaskVO.java
+D:\Senior\OneFlow\model\src\main\java\com\oc\oneflow\model\vo\TaskVO.java
+D:\Senior\OneFlow\model\src\main\java\com\oc\oneflow\model\scheduler\JobDescriptor.java
+D:\Senior\OneFlow\model\src\main\java\com\oc\oneflow\model\vo\ConfigVO.java
+D:\Senior\OneFlow\model\src\main\java\com\oc\oneflow\model\vo\StepVO.java

@@ -2,7 +2,7 @@ package com.oc.oneflow.common.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
-import com.oc.oneflow.model.ConfigVO;
+import com.oc.oneflow.model.vo.ConfigVO;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
