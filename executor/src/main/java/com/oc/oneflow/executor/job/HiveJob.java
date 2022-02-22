@@ -20,6 +20,6 @@ public class HiveJob implements Job {
         JobDataMap paramMap = jobExecutionContext.getMergedJobDataMap();
         appLogger.info("Run Hive");
         hiveService.runHql(paramMap.getString("path"), (Map<String, Object>) paramMap.get("hiveParam"));
-
+        appLogger.info("Done");
     }
 }
